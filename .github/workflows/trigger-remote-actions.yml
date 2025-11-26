@@ -2,6 +2,9 @@ name: Trigger Remote Actions # This workflow triggers remote workflows in other 
 
 on:
   workflow_dispatch:
+  # Runs every day at midnight UTC
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   # Job to trigger the AppealRightsExhausted workflow in a remote repo
