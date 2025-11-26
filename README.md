@@ -5,7 +5,7 @@ This is a workflow automation repository designed to trigger workflows in other 
 ## How It Works
 
 - **Manual Trigger:** You can manually trigger this workflow using the GitHub Actions UI (`workflow_dispatch`).
-- **Remote Actions:** When triggered, this workflow sends repository dispatch events to the following repositories:
+- **Remote Actions:** When triggered, this workflow sends repository dispatch events to the following repositories e.g these are some of the repos:
   - `UKHomeOffice/AppealRightsExhausted`
   - `UKHomeOffice/modern-slavery`
 
