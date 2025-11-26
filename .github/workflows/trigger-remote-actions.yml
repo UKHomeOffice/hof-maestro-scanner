@@ -1,25 +1,36 @@
-name: Trigger Remote Actions
+name: Trigger Remote Actions # This workflow triggers remote workflows in other repositories via repository_dispatch events.
 
 on:
   workflow_dispatch:
 
 jobs:
+  # Job to trigger the AppealRightsExhausted workflow in a remote repo
   trigger-appealrights:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Trigger AppealRightsExhausted workflow
+        # This step uses the 'peter-evans/repository-dispatch@v3' GitHub Action to trigger a repository_dispatch event,
+        # allowing us to initiate workflows in other repositories or trigger custom events within the same repository.
+        # Useful for orchestrating workflows across multiple repositories or for advanced automation scenarios.
         uses: peter-evans/repository-dispatch@v3
         with:
+          # GitHub token stored as a secret for authentication
           token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          # Target repository to trigger
           repository: UKHomeOffice/AppealRightsExhausted
+          # Event type to trigger in the target repository
           event-type: trigger-from-scanmaestro
 
+  # Job to trigger the modern-slavery workflow in a remote repo
   trigger-modernslavery:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Trigger modern-slavery workflow
         uses: peter-evans/repository-dispatch@v3
         with:
+          # GitHub token stored as a secret for authentication
           token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          # Target repository to trigger
           repository: UKHomeOffice/modern-slavery
+          # Event type to trigger in the target repository
           event-type: trigger-from-scanmaestro
