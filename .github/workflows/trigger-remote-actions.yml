@@ -69,3 +69,14 @@ jobs:
           token: ${{ secrets.GH_PERSONAL_TOKEN }}
           repository: UKHomeOffice/web-messengers
           event-type: trigger-from-scanmaestro
+
+  # Job to trigger the ukvi-complaints workflow in a remote repo
+  trigger-ukvi-complaints:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger ukvi-complaints workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/ukvi-complaints
+          event-type: trigger-from-scanmaestro
