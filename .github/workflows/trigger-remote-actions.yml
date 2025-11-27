@@ -70,7 +70,6 @@ jobs:
           repository: UKHomeOffice/web-messengers
           event-type: trigger-from-scanmaestro
 
-  # Job to trigger the ukvi-complaints workflow in a remote repo
   trigger-ukvi-complaints:
     runs-on: ubuntu-22.04
     steps:
