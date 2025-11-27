@@ -5,6 +5,8 @@ on:
   # Runs every day at midnight UTC
   schedule:
     - cron: '0 0 * * *'
+  push:
+    branches: [ main, master ]
 
 jobs:
   # Job to trigger the AppealRightsExhausted workflow in a remote repo
