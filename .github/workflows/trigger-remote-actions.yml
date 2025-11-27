@@ -59,3 +59,13 @@ jobs:
           token: ${{ secrets.GH_PERSONAL_TOKEN }}
           repository: UKHomeOffice/firearms
           event-type: trigger-from-scanmaestro
+          
+  trigger-web-messengers:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger web-messengers workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/web-messengers
+          event-type: trigger-from-scanmaestro
