@@ -80,6 +80,16 @@ jobs:
           repository: UKHomeOffice/ukvi-complaints
           event-type: trigger-from-scanmaestro
 
+  trigger-paf:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger PAF workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/paf
+          event-type: trigger-from-scanmaestro
+
   trigger-lamp:
     runs-on: ubuntu-22.04
     steps:
