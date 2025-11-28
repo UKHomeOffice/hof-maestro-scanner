@@ -24,39 +24,32 @@ runs:
     - name: Run vulnerability scan
       run: |
         set -euo pipefail
-        git fetch --all --prune
-        branches=$(git ls-remote --heads origin | awk '{print $2}' | sed 's|refs/heads/||')
         summary=""
         any_compromised=0
         repo_name=$(basename "$GITHUB_REPOSITORY")
-
-        for br in $branches; do
-          echo "=== Scanning branch: $br ==="
-          git checkout --force -B "$br" "origin/$br"
-          node hof-vulnerabilities-scanner/index.js --out "scan-results-${br}.json" || true
-          cnt=$(jq '.vulnerabilitiesCount // 0' "scan-results-${br}.json" 2>/dev/null || echo 0)
-          if [ "$cnt" -gt 0 ]; then
-            any_compromised=1
-            summary="${summary}${br}: ${cnt} compromised packages\n"
-          else
-            summary="${summary}${br}: 0\n"
-          fi
-        done
+        git checkout main 2>/dev/null || git checkout master
+        node hof-vulnerabilities-scanner/index.js --out "scan-results.json" || true
+        cnt=$(jq '.meta.vulnerabilitiesCount // 0' "$GITHUB_WORKSPACE/scan-results.json" 2>/dev/null || echo 0)
+        if [ "$cnt" -gt 0 ]; then
+          any_compromised=1
+          summary="${cnt} compromised package(s)"
+        fi
 
         if [ "$any_compromised" -eq 0 ]; then
           final="$repo_name: No compromised packages found. ✅"
         else
-          final="$repo_name: Compromised packages found:\n${summary}. ❌"
+          final="$repo_name: ${summary} found (See Github action logs for further details). ❌"
         fi
 
-        echo "summary=$final" >> $GITHUB_ENV
+        echo -e "$final" > summary.txt
+        echo "SUMMARY_FILE=summary.txt" >> $GITHUB_ENV
       shell: bash
 
     - name: Notify Slack
       env:
         SLACK_WEBHOOK_URL: ${{ inputs.slack-webhook-url }}
-        SCAN_OUTPUT: ${{ env.summary }}
       run: |
-        payload=$(jq -n --arg text "$SCAN_OUTPUT" '{text: $text}')
+        text=$(cat "$SUMMARY_FILE")
+        payload=$(jq -Rs '{text: .}' < "$SUMMARY_FILE")
         curl -X POST -H 'Content-type: application/json' --data "$payload" "$SLACK_WEBHOOK_URL"
       shell: bash
