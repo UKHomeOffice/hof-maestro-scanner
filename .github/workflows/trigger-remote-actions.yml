@@ -109,3 +109,13 @@ jobs:
           token: ${{ secrets.GH_PERSONAL_TOKEN }}
           repository: UKHomeOffice/additional-security-checks
           event-type: trigger-from-scanmaestro
+
+  trigger-hof-rds-api-lamp:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger hof-rds-api-lamp
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/hof-rds-api-lamp
+          event-type: trigger-from-scanmaestro
