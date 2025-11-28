@@ -109,3 +109,333 @@ jobs:
           token: ${{ secrets.GH_PERSONAL_TOKEN }}
           repository: UKHomeOffice/additional-security-checks
           event-type: trigger-from-scanmaestro
+
+  trigger-evisa-error-correction:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger evisa-error-correction workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/evisa-error-correction
+          event-type: trigger-from-scanmaestro
+
+  trigger-controlled-substance-licence:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger controlled-substance-licence workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/controlled-substance-licence
+          event-type: trigger-from-scanmaestro
+
+  trigger-visa-processing-times-tool:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger visa-processing-times-tool workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/visa-processing-times-tool
+          event-type: trigger-from-scanmaestro
+
+  trigger-evisa-find-my-reference:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger evisa-find-my-reference workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/evisa-find-my-reference
+          event-type: trigger-from-scanmaestro
+
+  trigger-change-of-address:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger change-of-address workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/coa
+          event-type: trigger-from-scanmaestro
+
+  trigger-public-allegations-form:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger public-allegations-form workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/paf
+          event-type: trigger-from-scanmaestro
+
+  trigger-report-terrorist-material:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger report-terrorist-material workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/rotm
+          event-type: trigger-from-scanmaestro
+
+  trigger-electronic-travel-authorisation:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger electronic-travel-authorisation workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/eta
+          event-type: trigger-from-scanmaestro
+
+  trigger-employers-checking-service:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger employers-checking-service workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/ecs
+          event-type: trigger-from-scanmaestro
+
+  trigger-general-registrars-office-enquiries:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger general-registrars-office-enquiries workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/gro
+          event-type: trigger-from-scanmaestro
+
+  trigger-brp-enquiry-form:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger trigger-brp-enquiry-form workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/brp_enquiry_forms
+          event-type: trigger-from-scanmaestro
+
+  trigger-refugee-integration-loan:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger refugee-integration-loan workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/refugee-integration-loan
+          event-type: trigger-from-scanmaestro
+
+  trigger-home-office-forms-feedback-form:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger home-office-forms-feedback-form workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/hff
+          event-type: trigger-from-scanmaestro
+
+  trigger-home-office-forms-demo:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger home-office-forms-demo workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/home-office-forms-demo
+          event-type: trigger-from-scanmaestro
+
+  trigger-explosives-precursors-poisons:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger explosives-precursors-poisons workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/explosives-precursors-poisons
+          event-type: trigger-from-scanmaestro
+
+  trigger-internal-allegation-referral:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger internal-allegation-referral workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/internal-allegation-referral
+          event-type: trigger-from-scanmaestro
+
+  trigger-landlords-checking-service:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger landlords-checking-service workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/landlords-checking-service
+          event-type: trigger-from-scanmaestro
+
+  trigger-evisa-contact-form:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger evisa-contact-form workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/evisa-contact-form
+          event-type: trigger-from-scanmaestro
+
+  trigger-landlords-make-a-report:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger landlords-make-a-report workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/lmr
+          event-type: trigger-from-scanmaestro
+
+  trigger-ms-schema:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger ms-schema workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/ms-schema
+          event-type: trigger-from-scanmaestro
+
+  trigger-file-vault:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger file-vault workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/file-vault
+          event-type: trigger-from-scanmaestro
+
+  trigger-html-pdf-converter:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger html-pdf-converter workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/html-pdf-converter
+          event-type: trigger-from-scanmaestro
+
+  trigger-icasework-resolver:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger icasework-resolver workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/icasework-resolver
+          event-type: trigger-from-scanmaestro
+
+  trigger-ims-resolver:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger ims-resolver workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/ims-resolver
+          event-type: trigger-from-scanmaestro
+
+  trigger-clue-resolver:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger clue-resolver workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/clue-resolver
+          event-type: trigger-from-scanmaestro
+
+  trigger-save-return-api:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger save-return-api workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/save-return-api
+          event-type: trigger-from-scanmaestro
+
+  trigger-save-return-lookup-ui:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger save-return-lookup-ui workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/save-return-lookup-ui
+          event-type: trigger-from-scanmaestro
+
+  trigger-save-return-email-alerts:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger save-return-email-alerts workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/save-return-email-alerts
+          event-type: trigger-from-scanmaestro  
+
+  trigger-hof-rds-api:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger hof-rds-api workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/hof-rds-api
+          event-type: trigger-from-scanmaestro    
+
+  trigger-hof-rds-api-lamp:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger hof-rds-api-lamp workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/hof-rds-api-lamp
+          event-type: trigger-from-scanmaestro        
+
+  trigger-homeoffice-countries:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger homeoffice-countries workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/homeoffice-countries
+          event-type: trigger-from-scanmaestro 
+
+  trigger-return-of-documents:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger return-of-documents workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/return-of-documents
+          event-type: trigger-from-scanmaestro          
+
+  trigger-end-tenancy:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger end-tenancy workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/end-tenancy
+          event-type: trigger-from-scanmaestro            
