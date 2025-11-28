@@ -109,3 +109,13 @@ jobs:
           token: ${{ secrets.GH_PERSONAL_TOKEN }}
           repository: UKHomeOffice/additional-security-checks
           event-type: trigger-from-scanmaestro
+
+  trigger-ukviet:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger UKVIET workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/end-tenancy
+          event-type: trigger-from-scanmaestro
