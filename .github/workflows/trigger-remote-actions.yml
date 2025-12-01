@@ -210,14 +210,14 @@ jobs:
           repository: UKHomeOffice/gro
           event-type: trigger-from-scanmaestro
 
-  trigger-biometric-residence-permit-error-reporting:
+  trigger-brp-enquiry-form:
     runs-on: ubuntu-22.04
     steps:
-      - name: Trigger biometric-residence-permit-error-reporting workflow
+      - name: Trigger trigger-brp-enquiry-form workflow
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.GH_PERSONAL_TOKEN }}
-          repository: UKHomeOffice/brp
+          repository: UKHomeOffice/brp_enquiry_forms
           event-type: trigger-from-scanmaestro
 
   trigger-refugee-integration-loan:
