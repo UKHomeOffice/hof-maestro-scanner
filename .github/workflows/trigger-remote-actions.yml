@@ -63,4 +63,4 @@ jobs:
         with:
           token: ${{ secrets.GH_PERSONAL_TOKEN }}
           repository: ${{ matrix.repository }}
-          event-type: trigger-from-scanmaestro  
+          event-type: trigger-from-scanmaestro
