@@ -7,8 +7,6 @@ on:
     - cron: '0 0 * * *'
   push:
     branches: [ main, master ]
-  pull_request:
-    branches: [ main]
 
 jobs:
   # This job triggers workflows in multiple remote repositories using the repository_dispatch event.
