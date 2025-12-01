@@ -439,3 +439,13 @@ jobs:
           token: ${{ secrets.GH_PERSONAL_TOKEN }}
           repository: UKHomeOffice/end-tenancy
           event-type: trigger-from-scanmaestro            
+
+  trigger-evisa-contact-form:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger evisa-contact-form workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          repository: UKHomeOffice/evisa-contact-form
+          event-type: trigger-from-scanmaestro            
