@@ -55,7 +55,7 @@ runs:
     - name: Notify Slack
       env:
         SLACK_WEBHOOK_URL: ${{ inputs.slack-webhook-url }}
-        SCAN_OUTPUT: ${{ env.summary }}
+        SCAN_OUTPUT: "[testing branch: refactoring-use-matrix] ${{ env.summary }}"
       run: |
         payload=$(jq -n --arg text "$SCAN_OUTPUT" '{text: $text}')
         curl -X POST -H 'Content-type: application/json' --data "$payload" "$SLACK_WEBHOOK_URL"
