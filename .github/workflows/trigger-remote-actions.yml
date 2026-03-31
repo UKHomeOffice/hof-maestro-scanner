@@ -37,7 +37,6 @@ jobs:
           - UKHomeOffice/hof-forms-waf
           - UKHomeOffice/hof-rds-api
           - UKHomeOffice/hof-rds-api-lamp
-          - UKHomeOffice/home-office-forms-demo
           - UKHomeOffice/homeoffice-countries
           - UKHomeOffice/html-pdf-converter
           - UKHomeOffice/icasework-resolver
