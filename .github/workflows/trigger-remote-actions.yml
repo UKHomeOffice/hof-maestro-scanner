@@ -56,7 +56,6 @@ jobs:
           - UKHomeOffice/save-return-lookup-ui
           - UKHomeOffice/ukvi-complaints
           - UKHomeOffice/visa-processing-times-tool
-          - UKHomeOffice/web-messengers
           - UKHomeOffice/eta-web-messenger
           - UKHomeOffice/euss-web-messenger
           - UKHomeOffice/evisa-web-messenger
